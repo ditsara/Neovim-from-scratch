@@ -32,12 +32,19 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<A-m>", ":bnext<CR>", opts)
+keymap("n", "<A-n>", ":bprevious<CR>", opts)
+
+-- Navigate tab pages
+keymap("n", "<A-u>", ":tabp<CR>")
+keymap("n", "<A-i>", ":tabn<CR>")
 
 -- Move text up and down
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
+
+-- Use semicolon for colon
+keymap("n", ";", ":")
 
 -- Insert --
 -- Press jk fast to exit insert mode 

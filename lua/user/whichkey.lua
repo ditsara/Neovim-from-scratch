@@ -141,7 +141,7 @@ local mappings = {
     },
     f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
-    I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+    I = { "<cmd>Mason<cr>", "Install Servers" },
     j = {
       "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
       "Next Diagnostic",
@@ -158,6 +158,14 @@ local mappings = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
       "Workspace Symbols",
     },
+    g = {
+      name = "Goto",
+      D = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "Declaration" },
+      d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Definition" },
+      I = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation" },
+      r = { "<cmd>lua vim.lsp.buf.references()<CR>", "References" },
+      l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Diagnostic" },
+    }
   },
   s = {
     name = "Search",
