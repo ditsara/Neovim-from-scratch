@@ -8,6 +8,7 @@ local servers = {
 	"jsonls",
 	-- "yamlls",
   "solargraph",
+  "gopls",
 }
 
 local settings = {
