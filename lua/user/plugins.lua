@@ -93,7 +93,12 @@ return packer.startup(function(use)
 	-- 		require("copilot_cmp").setup()
 	-- 	end,
 	-- })
-  use({ "github/copilot.vim" })
+	use({ "github/copilot.vim" })
+	use({
+		"CopilotC-Nvim/CopilotChat.nvim",
+		branch = "canary",
+		requires = { { "nvim-lua/plenary.nvim" }, { "github/copilot.vim" } },
+	})
 
 	-- Snippets
 	use({ "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" }) --snippet engine
@@ -120,6 +125,9 @@ return packer.startup(function(use)
 
 	-- Code folding
 	-- use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
+
+	-- SLIM syntax highlighting
+	use({ "slim-template/vim-slim" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

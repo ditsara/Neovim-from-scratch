@@ -37,7 +37,7 @@ local options = {
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
   textwidth = 80,
-  colorcolumn = { "+1" },
+  colorcolumn = "80",
 }
 
 for k, v in pairs(options) do
